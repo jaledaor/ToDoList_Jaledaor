@@ -28,11 +28,12 @@ public class ListPresenter implements IListPresenter {
         objTarea.setRealizada(false);
 
         ltarea.addTarea(objTarea);
+
+        view.refrescarListaTareas();
     }
 
     @Override
-    public void obtenerTareas() {
-        List<Tarea> lsTareas= ltarea.getTareas();
-        view.mostrarListaTareas(lsTareas);
+    public List<Tarea> obtenerTareas() {
+        return ltarea.getTareas();
     }
 }

@@ -12,8 +12,8 @@ public interface IListView {
 
     void clickAddtarea();
 
-    void mostrarListaTareas(List<Tarea> lstarea);
+    void refrescarListaTareas();
 
-    void actualizarItem(int posicion, boolean estado);
+    void refrescarTarea(int posicion, boolean estado);
 
 }
