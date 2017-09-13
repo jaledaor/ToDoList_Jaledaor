@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import co.edu.ucc.todolist_jaledaor.R;
 import co.edu.ucc.todolist_jaledaor.modelo.Tarea;
+import co.edu.ucc.todolist_jaledaor.vistas.adaptadores.TodoListAdapter;
 import co.edu.ucc.todolist_jaledaor.vistas.presenters.IListPresenter;
 import co.edu.ucc.todolist_jaledaor.vistas.presenters.ListPresenter;
 
@@ -31,6 +32,11 @@ public class ListActivity extends AppCompatActivity implements IListView{
 
         LinearLayoutManager llm= new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
+
+        rvListTODO.setLayoutManager(llm);
+
+        List<Tarea> lstTareas= listPresenter.obtenerTareas();
+        rvListTODO.setAdapter(new TodoListAdapter(lstTareas));
 
         ButterKnife.bind(this);
     }
