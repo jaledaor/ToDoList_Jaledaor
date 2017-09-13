@@ -2,6 +2,7 @@ package co.edu.ucc.todolist_jaledaor.vistas.adaptadores;
 
 import android.support.v7.widget.AppCompatCheckBox;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.textservice.TextInfo;
@@ -28,7 +29,10 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ItemTo
     }
     @Override
     public ItemTodoList onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        View view= LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_list, parent, false);
+
+        return new ItemTodoList(view);
     }
 
     @Override
