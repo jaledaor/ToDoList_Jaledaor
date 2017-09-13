@@ -2,6 +2,7 @@ package co.edu.ucc.todolist_jaledaor.vistas;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
@@ -27,6 +28,9 @@ public class ListActivity extends AppCompatActivity implements IListView{
         setContentView(R.layout.activity_list);
 
         listPresenter= new ListPresenter(this);
+
+        LinearLayoutManager llm= new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
 
         ButterKnife.bind(this);
     }
