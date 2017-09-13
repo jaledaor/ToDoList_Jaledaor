@@ -37,7 +37,10 @@ public class TodoListAdapter extends RecyclerView.Adapter<TodoListAdapter.ItemTo
 
     @Override
     public void onBindViewHolder(ItemTodoList holder, int position) {
+       Tarea tarea= dataset.get(position);
 
+        holder.tvTarea.setText(tarea.getNombre());
+        holder.chkTarea.setChecked(tarea.isRealizada());
     }
 
     @Override
