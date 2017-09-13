@@ -11,7 +11,7 @@ import co.edu.ucc.todolist_jaledaor.modelo.Tarea;
 
 public class LTarea implements ILtarea {
 
-    private static List<Tarea> lstTarea= new ArrayList<>();
+    public static List<Tarea> lstTarea= new ArrayList<>();
 
     @Override
     public void addTarea(Tarea tarea) {
